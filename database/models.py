@@ -21,3 +21,6 @@ class UsuarioModel(Base):
 	id_user: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
 	User_name: Mapped[str] = mapped_column(String(20), nullable=False)
 	id_tarea: Mapped[int] = mapped_column(Integer, ForeignKey("tareas.id"))
+
+																			
+

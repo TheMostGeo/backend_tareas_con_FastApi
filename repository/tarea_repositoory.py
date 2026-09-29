@@ -5,6 +5,7 @@ from Services.schemas.tarea_schema import CrearTarea
 from database.models import TareaModel
 
 
+
 def obtener_tareas(db: Session, skip: int = 0, limit: int = 10) -> list[TareaModel]:
 	consulta = select(TareaModel).offset(skip).limit(limit)
 	return list(db.scalars(consulta).all())
